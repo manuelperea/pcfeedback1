@@ -18,7 +18,7 @@ public class Task {
     private Long id;
 
     private Long jobId;
-    private Integer sharIndex;
+    private Integer shardIndex;
 
     @Enumerated(EnumType.STRING)
     private JobStatus status;
@@ -29,9 +29,9 @@ public class Task {
     private LocalDateTime finishedAt;
     private String errorMessage;
 
-    public Task(Long jobId, Integer  sharIndex) {
+    public Task(Long jobId, Integer  shardIndex) {
         this.jobId = jobId;
-        this.sharIndex = sharIndex;
+        this.shardIndex = shardIndex;
         this.status = JobStatus.PENDING;
         this.attempts = 0;
     }
